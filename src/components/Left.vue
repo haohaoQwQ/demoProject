@@ -4,7 +4,7 @@
 		<ul class="menu">
 			<li @click="menu1">动漫</li>
 			<li @click="menu2">明星</li>
-			<li>火影</li>
+			<li>火影1</li>
 			<li>火影</li>
 			<li>火影</li>
 			<li>火影</li>
