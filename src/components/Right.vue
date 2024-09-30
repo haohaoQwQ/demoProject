@@ -1,43 +1,42 @@
+<!--
+ * @Author: 刘梦昊 1551316289@qq.com
+ * @Date: 2024-09-27 11:05:42
+ * @LastEditTime: 2024-09-30 15:27:16
+ * @LastEditors: 刘梦昊
+ * @FilePath: \vueproject01\src\components\Right.vue
+ * @Description: 
+-->
 <template>
 	<div>
-		<div v-if="kk==1">
-			<GoodList :goodId="1"></GoodList>
+		<div v-if="tabIndex === 1">
+			1111
 		</div>
-		<div v-else-if="kk==2">
-			<GoodList :goodId="2"></GoodList>
-		</div>
-		<div v-else-if="kk==3">
-			<GoodList :goodId="3"></GoodList>
-		</div>
-		<div v-else-if="kk==4">
-			<GoodList :goodId="4"></GoodList>
-		</div>
-		<div v-else>
-			<GoodList :goodId="0"></GoodList>
+		<div v-else-if="tabIndex === 2">
+			2222
 		</div>
 	</div>
 </template>
 
 <script>
-	import Msg from './msg.js'
-	import GoodList from './goodsList.vue'
-	export default{
-		data() {
-			return {
-				kk:0
-			}
-		},
-		mounted:function(){
-			var _this = this
-			// $on用于组件间接受传的值
-			Msg.$on('val',function(m){
-				_this.kk = m
-			})
-		},
-		components:{
-			GoodList
+import GoodList from './goodsList.vue'
+export default {
+	components:{
+		GoodList
+	},
+	data() {
+		return {
 		}
-	}
+	},
+	computed: {
+		tabIndex () {
+			return this.$store.state.activeTab
+		}
+	},
+	mounted () {
+		
+	},
+	
+}
 </script>
 
 <style>

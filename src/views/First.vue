@@ -1,12 +1,17 @@
+<!--
+ * @Author: 刘梦昊 1551316289@qq.com
+ * @Date: 2024-09-27 11:05:42
+ * @LastEditTime: 2024-09-29 17:30:45
+ * @LastEditors: 刘梦昊
+ * @FilePath: \vueproject01\src\views\First.vue
+ * @Description: 
+-->
 <template>
 	<div class="main">
 		<div class="left">
 			<Left></Left>
 		</div>
 		<div class="right">
-			<div class="top">
-				<img src="../../public/img/title.jpg" />
-			</div>
 			<div class="bottom">
 				<Right></Right>
 			</div>
