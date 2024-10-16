@@ -1,7 +1,7 @@
 <!--
  * @Author: 刘梦昊 1551316289@qq.com
  * @Date: 2024-09-27 11:05:42
- * @LastEditTime: 2024-09-29 17:30:45
+ * @LastEditTime: 2024-10-16 10:18:42
  * @LastEditors: 刘梦昊
  * @FilePath: \vueproject01\src\views\First.vue
  * @Description: 
@@ -9,53 +9,115 @@
 <template>
 	<div class="main">
 		<div class="left">
-			<Left></Left>
+				<ul class="menu">
+					<li :class="{active: demoIndex === 1}" @click="menu1">demo1</li>
+					<li :class="{active: demoIndex === 2}" @click="menu2">demo2</li>
+				</ul>
 		</div>
 		<div class="right">
 			<div class="bottom">
-				<Right></Right>
+				<div v-if="demoIndex === 1">
+					1111
+				</div>
+				<div v-else-if="demoIndex === 2">
+					2222
+					<div class="box"></div>
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-	import Left from '../components/Left.vue'
-	import Right from '../components/Right.vue'
 	export default{
 		components:{
-			Left,
-			Right
+		},
+		mounted () {
+		},
+		computed: {
+			demoIndex () {
+				return this.$store.state.activeTab
+			}
+		},
+		methods: {
+			menu1 () {
+				this.$store.commit('setActiveTab', 1)
+			},
+			menu2 () {
+				this.$store.commit('setActiveTab', 2)
+			},
 		}
 	}
 </script>
 
 <style>
-	*{
-		padding: 0;	
-		margin: 0;
-	}
 	.main{
-		width: 1200px;
-		margin: 20px auto;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.left{
 		width: 100px;
-		float: left;
-		margin-right: 10px;
+		margin-right: 20px;
+		border: 1px solid #ccc;
 	}
 	.right{
-		width: 1000px;
-		float: right;
-		margin-left: 10px;
-	}
-	.top img{
-		height: 230px;
-		width: 1000px;
+		width: 800px;
 	}
 	.left, .right{
-		background-color: #f5f5f5;
 		height: 500px;
+		background-color: #f5f5f5;
+	}
+
+		.menu {
+		width: 100%;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.menu li {
+		width: 100%;
+		height: 50px;
+		list-style:none;
+		line-height: 50px;
+		cursor: pointer;
+		text-align: center;
+		border-bottom: 1px solid #ccc;
+	}
+	.menu .active {
+		background-color: rgb(197, 188, 188);
+	}
+
+		.box {
+		height: 100px;
+		width: 100px;
+		border: 15px solid #f08d8d;
+		animation: changebox 1s ease-in-out 0s infinite alternate running forwards;
+	}
+
+	.box:hover {
+		animation-play-state: paused;
+	}
+
+	@keyframes changebox {
+		10% {
+			background: rgb(240, 141, 141);
+		}
+		50% {
+			width: 80px;
+			background: rgb(141, 159, 240);	
+		}
+		70% {
+			border: 15px solid rgb(241, 241, 139);
+		}
+		100% {
+			width: 150px;
+			height: 150px;
+			background: rgb(141, 240, 162);
+		}
 	}
 	
 </style>
