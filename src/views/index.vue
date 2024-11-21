@@ -1,7 +1,7 @@
 <!--
  * @Author: 刘梦昊 1551316289@qq.com
  * @Date: 2024-09-27 11:05:42
- * @LastEditTime: 2024-10-16 10:18:42
+ * @LastEditTime: 2024-10-23 16:15:34
  * @LastEditors: 刘梦昊
  * @FilePath: \vueproject01\src\views\First.vue
  * @Description: 
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-	export default{
+	export default {
 		components:{
 		},
 		mounted () {
@@ -50,56 +50,59 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	.main{
 		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	.left{
 		width: 100px;
 		margin-right: 20px;
 		border: 1px solid #ccc;
 	}
+
 	.right{
 		width: 800px;
 	}
+
 	.left, .right{
 		height: 500px;
 		background-color: #f5f5f5;
 	}
 
-		.menu {
+	.menu {
 		width: 100%;
+		li {
+			width: 100%;
+			height: 50px;
+			list-style:none;
+			line-height: 50px;
+			cursor: pointer;
+			text-align: center;
+			border-bottom: 1px solid #ccc;
+		}
+		.active {
+			background-color: rgb(197, 188, 188);
+		}
 	}
+
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 	}
-	.menu li {
-		width: 100%;
-		height: 50px;
-		list-style:none;
-		line-height: 50px;
-		cursor: pointer;
-		text-align: center;
-		border-bottom: 1px solid #ccc;
-	}
-	.menu .active {
-		background-color: rgb(197, 188, 188);
-	}
 
-		.box {
+	.box {
 		height: 100px;
 		width: 100px;
 		border: 15px solid #f08d8d;
 		animation: changebox 1s ease-in-out 0s infinite alternate running forwards;
-	}
-
-	.box:hover {
-		animation-play-state: paused;
+		&:hover {
+			animation-play-state: paused;
+		}
 	}
 
 	@keyframes changebox {
