@@ -1,17 +1,17 @@
 <!--
  * @Author: 刘梦昊 1551316289@qq.com
  * @Date: 2024-09-27 11:05:42
- * @LastEditTime: 2024-10-23 16:15:34
+ * @LastEditTime: 2024-12-12 10:59:43
  * @LastEditors: 刘梦昊
- * @FilePath: \vueproject01\src\views\First.vue
+ * @FilePath: \vueproject01\src\views\index.vue
  * @Description: 
 -->
 <template>
 	<div class="main">
 		<div class="left">
 				<ul class="menu">
-					<li :class="{active: demoIndex === 1}" @click="menu1">demo1</li>
-					<li :class="{active: demoIndex === 2}" @click="menu2">demo2</li>
+					<li :class="{active: demoIndex === 1}" @click="menu1">1</li>
+					<li :class="{active: demoIndex === 2}" @click="menu2">2</li>
 				</ul>
 		</div>
 		<div class="right">
@@ -20,7 +20,7 @@
 					1111
 				</div>
 				<div v-else-if="demoIndex === 2">
-					2222
+					css3 animation样式应用
 					<div class="box"></div>
 				</div>
 			</div>

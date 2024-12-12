@@ -32,7 +32,11 @@ const routes = [
   {
     path: '/demo4',
     component: () => import('../views/demo4/canvasTriangle.vue')
-  }
+  },
+  {
+    path: '/demo5',
+    component: () => import('../views/demo5/svg.vue')
+  },
 ]
 
 const router = new VueRouter({

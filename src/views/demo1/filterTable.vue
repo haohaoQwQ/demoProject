@@ -1,13 +1,19 @@
 <!--
  * @Author: 刘梦昊 1551316289@qq.com
  * @Date: 2024-10-23 16:36:12
- * @LastEditTime: 2024-11-21 17:00:38
+ * @LastEditTime: 2024-12-12 16:29:02
  * @LastEditors: 刘梦昊
  * @FilePath: \vueproject01\src\views\demo1\filterTable.vue
  * @Description: 过滤排序表格
 -->
 <template>
   <div class="containerWrap">
+     <svg width="200" height="200">
+      <g>
+      <circle cx="100" cy="100" r="80"></circle>
+      </g>
+    </svg>
+    
     <div class="arrowDemo"></div>
     <div class="descArrowDemo"></div>
     <div>Search<input name="query" v-model="searchQuery" /></div>
@@ -107,6 +113,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+polygon {
+  fill: #42b983;
+  opacity: 0.75;
+}
+
+circle {
+  fill: transparent;
+  stroke: #999;
+}
+
 .arrowDemo {
   border-left: 100px solid #7aecb9;
   border-right: 100px solid #7aecb9;

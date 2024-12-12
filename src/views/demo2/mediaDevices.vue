@@ -1,10 +1,10 @@
 <!--
  * @Author: 刘梦昊 1551316289@qq.com
  * @Date: 2024-11-11 10:39:24
- * @LastEditTime: 2024-11-12 11:48:06
+ * @LastEditTime: 2024-12-12 16:40:45
  * @LastEditors: 刘梦昊
- * @FilePath: \vueproject01\src\views\mediaDevices.vue
- * @Description: demo2: navigator.mediaDevices的用法
+ * @FilePath: \vueproject01\src\views\demo2\mediaDevices.vue
+ * @Description: 浏览器调用摄像头拍照保存，navigator.mediaDevices的用法
 -->
 <template>
   <div class="containerWrap" ref="wrapper">
