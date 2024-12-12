@@ -6,7 +6,7 @@
  * @FilePath: \vueproject01\README.md
  * @Description: 
 -->
-# project01: vue2项目，写的单个单个的小demo
+# project: vue2项目，存放平常自己写的小demo
 
 ## Project setup
 ```
